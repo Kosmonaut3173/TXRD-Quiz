@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Rubik+Burned&family=Rubik+Wet+Paint&display=swap');
 
 *{
     margin: 0;
@@ -9,32 +9,50 @@
 }
 
 body{
-    background: green;
+    /* background-image: url(./assets/derby-logo.jpg); */
     font-family: 'kalam', cursive;
-}
-
-.txrd-header{
-    /* height: 100px; */
-    width: 100%;
-    /* margin-bottom: 30px; */
-    text-align: center;
-    font-size: 50px;
-    color: rgb(115, 22, 22);
+    background: #004622; 
 }
 
 
+.score-brd,
+.quiz-box,
 .info-box{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
     width: 540px;
-    background: #fff;
+    background: #fffffe;
     border-radius: 5px;
+    
+    user-select: none;
+}
+
+/* TODO: PAGE HEADER */
+/* IMAGE WILL CHNAGE SCREEN SIZE 888PX  */
+.txrd-header{
+    height: 250px;
+    text-align: center;
+    font-family: "rubik burned", cursive;
+    font-size: 70px;
+    color: rgb(223, 18, 18);
+    background-image: url(./assets/Training-Program-Tryouts.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+
+
+/* TODO: card talking about quiz */
+/* initial card showing what quiz is about */
+.info-box{
+    display: none;
 }
 
 .info-title{
-    /* height: 150px; */
+    
     width: 100%;
     border-bottom: 1px solid grey;
     display: flex;
@@ -51,26 +69,219 @@ body{
 }
 
 
-/* start button styling */
-.start-btn{
+/* start and scores buttons styling */
+.buttons{
     display: flex;
     justify-content: center;
 }
 
+/* this code will affect both buttons "at rest" */
 .start-btn button{
     margin: 20px;
     font-size: 32px;
     font-weight: 800;
     padding: 15px 30px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #4d4d47;
+    color: #fffffe;
     cursor: pointer;
-    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease;
+    
 }
 
-button:hover{
-    background: rgb(171, 230, 194);
-    /* border-color: rgb(6, 59, 6); */
-   
+/* hover affects for each btn */
+.restart:hover,
+#start button:hover{
+    background: #8cd6aa;
+    color: black;
+    transform: scale(1.03);
 }
 
+.quit:hover,
+#s-board button:hover{
+    background: #e4df3a;
+    color: black;
+    transform: scale(1.03);
+}
+
+/* TODO: QUIZ BOX */
+.quiz-box{
+    /* display: none; */
+}
+
+/* header will display time remaining */
+.quiz-box header{
+    position: relative;
+    z-index: 99;
+    height: 70px;
+    padding: 0 30px;
+    background: #4d4d47;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 3PX solid #e4df3a;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    color:#fffffe;
+    
+}
+
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: #abd1c6;
+    border: 1px solid #004643;
+    border-radius: 5px;
+    padding: 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.timer-sec{
+    text-align: center;
+    font-weight: 800;
+    color: #fffffe;
+    background: #004622;
+    height: 30px;
+    width: 45px;
+
+}
+
+/* quiz box will contain question and answer options */
+.quiz-box section{
+    padding: 0 20px;
+    background: #fffffe;
+}
+
+.questions{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.multiple-choice{
+    
+    display: block;
+}
+
+.options{
+    background: #c3faeb;
+    border: 1px solid #004643;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.options:hover{
+    font-weight:900;
+    background-color: #abd1c6;
+    transform: scale(1.03);
+}
+
+.check{
+    color: #16bc66;
+}
+.cross{
+    color: #f00;
+}
+
+/* quiz box footer */
+.quiz-box footer{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.next-btn{
+    width: 80px;
+    color: #fffffe;
+    background: #4d4d47;
+    border-radius: 5px;
+}
+.next-btn:hover{
+    color: black;
+    font-weight: 800;
+    background: #e4df3a;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+/* todo score board */
+/* this will give user their score and show high scores */
+.score-brd{
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.wheels{
+    font-size: 50px;
+}
+
+.score-txt{
+    background: #f00;
+    color: #fffffe;
+    padding: 10px;
+    width: 300px;
+    font-family: "rubik wet paint";
+    display: flex;
+    justify-content: space-between;
+}
+.score-brd button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4d4d47;
+    color: #fffffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* todo FORM FOR SCORE BOARD */
+#saveScore{
+    width: 90px;
+}
+#saveScore:hover{
+    background: #85e7e2;
+    color: black;
+    transform: scale(1.03);
+}
+.high-score{
+    background: #c3faeb;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 10px;
+}
+.form{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 888px) {
+    .txrd-header{
+        background-image: url(./assets/TXRD-Ref.jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        
+    }
+}

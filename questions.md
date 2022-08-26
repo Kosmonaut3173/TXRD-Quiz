@@ -4,7 +4,7 @@
 A   Cherry Bombs
 B   Holy Rollers
 C   All Scar Army <--
-D   Rhinestone Cowggirls
+D   Rhinestone Cowgirls
 
 2] what is likely NOT to happen after a minor penalty is called?
 A   pillow fight

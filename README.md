@@ -14,7 +14,7 @@ Actions:
 <a href="#link to page here" target="_blank">link to page here</a>
 
 <figure>
-    <img src="link to screenshot here" alt="screenshot of quiz app">
+    <img src="./assets/Screenshot.png" alt="screenshot of quiz app">
     <figcaption> screenshot of quiz app</figcaption>
 </figure>
 

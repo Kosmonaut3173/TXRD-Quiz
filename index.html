@@ -9,13 +9,14 @@
     <script src="https://kit.fontawesome.com/849b0e4ef6.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- <div class="block"> -->
+
     <!-- TXRD DERBY LOGO -->
     <header class="txrd-header">
         <h1>TXRD</h1>
     </header>
-
     
-    <!-- info-box -->
+    <!--todo INFO BOX -->
     <div class="info-box">
         <div class="info-title">
             <h2>How much do you know about </br> Texas Roller Derby?</h2>
@@ -24,16 +25,90 @@
             <p>Best contact sport on wheels! TXRD is an Austin Texas original that brought back roller derby to the rest of the US from the brink of extinction. There is now a derby league on every continent except for Antarctica! Click below to test your TXRD knowlege.</p>
         </div>
         
-        <!-- start button -->
-        <div class="start-btn"><button>START QUIZ</button></div>
+        <!-- start and scores buttons -->
+        <div class="buttons">
+            <div id="start" class="start-btn"><button>START QUIZ</button></div>
+            <div id="s-board" class="start-btn"><button>HIGH SCORES</button></div>
+        </div>
     </div>
 
 
-    <!-- quiz-box -->
+    <!-- todo QUIZ BOX -->
     <div class="quiz-box">
-        
+        <header> <!-- timer at top -->
+            <div class="title">Beat the timer for a higher score!</div>
+            <div class="timer">
+                <div class="time-text">time left</div>
+                <div class="timer-sec">8</div>
+            </div>
+        </header>
+
+        <section> 
+            <!-- questions-->
+            <div class="questions">
+                <span>Which team reps Austin in the WFTDA and is made up of players from the TXRD league teams?</span>
+            </div>
+            <!-- choices -->
+            <div class="multiple-choice">
+                <div class="options">
+                    <span data-number="1">Cherry Bombs</span>
+                </div>
+                <div class="options">
+                    <span data-number="2">Holy Rollers</span>
+                </div>
+                <div class="options">
+                    <span data-number="3">All Scar Army</span>
+                    <div class="check"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+                <div class="options">
+                    <span data-number="4">Rhinestone Cowgirls</span>
+                    <div class="cross"><i class="fa-solid fa-circle-xmark"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="total-q">
+                <p><span>2</span> of 5 Questions</p>
+            </div>
+            <button class="next-btn">Next</button>
+        </footer>
+    </div>
+    
+    <!-- todo SCORE BOARD -->
+    <div class="score-brd">
+        <div class="wheels">
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+        </div>
+
+        <h2 class="game-over">Yay! You've completed the quiz!</h2>
+
+        <div class="score-txt">
+            <div class="txt">YOUR SCORE WAS </div>
+            <div class="score"> 500</div>
+        </div>
+        <div class="high-score">
+            <form class="form">
+                <p class="end-txt">Enter your name to save your score</p>
+                <input type="text" name="name" id="username" placeholder="enter name here">
+                <button type="submit" id="saveScore">SAVE</button>
+            </form>
+            <div class="past-scores">Michael 700</div>
+        </div>
+        <div class="wheels">
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+            <i class="fa-solid fa-compact-disc fa-spin"></i>
+        </div>
+        <div class="buttons">
+            <button class="restart">Retry Quiz</button>
+            <button class="quit">Exit</button>
+        </div>
     </div>
 
+    <script scr="script.js"></script>
 
 </body>
 </html>
