@@ -11,7 +11,7 @@ Actions:
 
 ## DEMO
 
-<a href="#link to page here" target="_blank">link to page here</a>
+<a href="https://kosmonaut3173.github.io/TXRD-Quiz/" target="_blank">https://kosmonaut3173.github.io/TXRD-Quiz/</a>
 
 <figure>
     <img src="./assets/Screenshot.png" alt="screenshot of quiz app">
